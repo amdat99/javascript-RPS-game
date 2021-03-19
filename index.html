@@ -1,0 +1,60 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title> Rock paper scissors game</title>
+
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
+  
+    <div>
+        <span id = 'player-vs-player'> Play 2 players</span>
+        <span id = 'player-vs-cpu'> Play against computer</span>
+    </div>
+
+    <div class="score-board">
+        <div id = 'user-label' class="badge"></div> 
+        <div id  ='cpu-label' class="badge"></div> 
+            <span id = 'user-score'>0 </span><span id='divider'>:</span><span id = 'cpu-score'>0</span>
+    </div>
+
+    <div class="result">
+        <p class = 'result-par'></p>
+    </div>
+
+    <div class="choices"> 
+        <div class="choice" id ='r'>
+            <img src="http://clipart-library.com/data_images/301711.png" alt="rock" height="50" width="50" />
+        </div>
+        <div class="choice" id ='p'>
+            <img src="http://clipart-library.com/image_gallery/n1381868.png" alt="paper" height="50" width="50" />
+        </div>
+        <div class="choice" id = 's'>
+            <img src="http://clipart-library.com/images_k/scissors-clipart-transparent/scissors-clipart-transparent-4.png" alt="scissors" height="50" width="50" />
+        </div>
+
+        <div class="choice" id ='r2'>
+            <img src="http://clipart-library.com/data_images/301711.png" alt="rock" height="50" width="50" />
+        </div>
+        <div class="choice" id ='p2'>
+            <img src="http://clipart-library.com/image_gallery/n1381868.png" alt="paper" height="50" width="50" />
+        </div>
+        <div class="choice" id = 's2'>
+            <img src="http://clipart-library.com/images_k/scissors-clipart-transparent/scissors-clipart-transparent-4.png" alt="scissors" height="50" width="50" />
+        </div>
+
+    </div>
+
+    <p id = 'message-action'>First to 10 Wins</p>
+    <script src="app.js"></script>
+</body>
+</html>
