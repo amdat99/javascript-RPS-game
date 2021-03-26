@@ -98,7 +98,7 @@ const winnerCheck = (value,user,cpu) => {
     }
     else if (value === 'cpu'){
         
-        if (currentGameMode = 'PVE'){
+        if (currentGameMode === 'PVE'){
         cpuScore ++
         cpuScore_span.innerHTML = cpuScore
         result_div.innerHTML = 'computer wins. '+ cpu +' beats ' + user
@@ -131,6 +131,7 @@ const setGamePVP = () => {
 const setGamePVE = () => {
     const userChoice =  getPlayer1Choice()
     const cpuChoice = setInputs()
+    currentGameMode = 'PVE'
  
     game(userChoice, cpuChoice)
 }
@@ -139,24 +140,31 @@ const game = (userChoice,cpuChoice) => {
     
     console.log(userChoice, cpuChoice,currentGameMode)
 
-switch(userChoice + cpuChoice) {
-    case 'rockscissors':
-    case 'paperrock':
-    case 'scissorspaper':
-        winnerCheck('user',userChoice,cpuChoice)
-        break;
-    case 'rockpaper':
-    case 'paperscissors':
-    case 'scissorsrock':
-        winnerCheck('cpu',userChoice,cpuChoice)
-        break;
-    case 'rockrock':
-    case 'paperpaper':
-    case 'scissorsscissors':
-        winnerCheck('draw',userChoice,cpuChoice)
-        break;
-    }
+switch (userChoice + cpuChoice) {
+  case "rockscissors":
+  case "paperrock":
+  case "scissorspaper":
+    winnerCheck("user", userChoice, cpuChoice);
+    break;
+  case "rockpaper":
+  case "paperscissors":
+  case "scissorsrock":
+    winnerCheck("cpu", userChoice, cpuChoice);
+    break;
+  case "rockrock":
+  case "paperpaper":
+  case "scissorsscissors":
+    winnerCheck("draw", userChoice, cpuChoice);
+    break;
+}
+
+resetChoice();
 } 
+
+const resetChoice = () => {
+player1Choice = ''
+player2Choice = ''
+}
 
 
 const setGame = () => {
